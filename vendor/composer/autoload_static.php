@@ -11,12 +11,30 @@ class ComposerStaticInit7db9fe0780e2543b2e90b2000f48033f
         array (
             'Maelcv\\Morpion\\' => 15,
         ),
+        'F' => 
+        array (
+            'Fuz\\Component\\SharedMemory\\' => 27,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Maelcv\\Morpion\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Fuz\\Component\\SharedMemory\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ninsuo/php-shared-memory/src/Fuz/Component/SharedMemory',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'M' => 
+        array (
+            'Mustache' => 
+            array (
+                0 => __DIR__ . '/..' . '/mustache/mustache/src',
+            ),
         ),
     );
 
@@ -29,6 +47,7 @@ class ComposerStaticInit7db9fe0780e2543b2e90b2000f48033f
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit7db9fe0780e2543b2e90b2000f48033f::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit7db9fe0780e2543b2e90b2000f48033f::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit7db9fe0780e2543b2e90b2000f48033f::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit7db9fe0780e2543b2e90b2000f48033f::$classMap;
 
         }, null, ClassLoader::class);

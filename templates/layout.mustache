@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <meta http-equiv="refresh" content="10">
+    <style>
+        .grille {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+        }
+        .case {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    {{{content}}}
+</body>
+</html>
+
+// templates/game.mustache
+<h1>Morpion - Tour du joueur {{joueur}}</h1>
+<form method="POST">
+    <div class="grille">
+        {{#grille}}
+            {{#.}}
+                <button type="submit" class="case" name="ligne" value="{{ligne}}" {{#disabled}}disabled{{/disabled}}>
+                    {{valeur}}
+                    <input type="hidden" name="colonne" value="{{colonne}}">
+                </button>
+            {{/.}}
+        {{/grille}}
+    </div>
+</form>
