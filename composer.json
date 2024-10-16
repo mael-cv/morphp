@@ -1,0 +1,19 @@
+{
+    "name": "maelcv/morpion",
+    "description": "Jeu de morpion en PHP",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Maelcv\\Morpion\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mael Chebbi Vigneau",
+            "email": "mael.vigneau33@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
