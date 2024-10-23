@@ -5,7 +5,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Maelcv\\Morpion\\": "src/"
+            "Maelcv\\Morpion\\": "src/",
+            "Maelcv\\Morpion\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -15,5 +16,14 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {},
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/labasse/test-scaffolder"
+        }
+    ],
+    "require-dev": {
+        "syllab/test-scaffolder": "dev-main"
+    }
 }

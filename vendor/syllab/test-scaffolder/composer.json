@@ -1,0 +1,26 @@
+{
+    "name": "syllab/test-scaffolder",
+    "description": "A php functional test scaffolder for webdriver and phpunit using maker",
+    "type": "library",
+    "bin" : [
+        "src/console.php"
+    ],
+    "require": {
+        "phpunit/phpunit": "^11.4",
+        "php-webdriver/webdriver": "^1.15.1",
+        "ext-zip": "*",
+        "symfony/maker-bundle": "^1.0"
+    },
+    "license": "The unlicense",
+    "autoload": {
+        "psr-4": {
+            "Syllab\\TestScaffolder\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "syllab.com"
+        }
+    ],
+    "minimum-stability": "alpha"
+}
