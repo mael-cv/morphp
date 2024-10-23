@@ -15,5 +15,8 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "ninsuo/php-shared-memory": "^2.1",
+        "mustache/mustache": "^2.14"
+    }
 }

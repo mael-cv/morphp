@@ -49,6 +49,7 @@ function initGame($gameId) {
 function assignPlayer($gameId, $playerId) {
     $pdo = getDbConnection();
 
+
     // Vérifier si le joueur existe déjà dans le jeu (peu importe la partie)
     $stmt = $pdo->prepare("SELECT * FROM players WHERE id = ?");
     $stmt->execute([$playerId]);
@@ -83,6 +84,7 @@ function assignPlayer($gameId, $playerId) {
     $stmt->execute([$status, $gameId]);
 
     return $symbol;
+
 }
 
 // Vérifier si un joueur est spectateur
@@ -150,8 +152,10 @@ function resetGame($gameId) {
 
 $gameId = $_GET['gameId'] ?? null;
 if (!$gameId) {
+
     
     setcookie('playerId', '', time() - 3600, "/");
+
     $gameId = uniqid('game_');
     header("Location: index.php?gameId=" . $gameId);
     exit;
@@ -164,6 +168,8 @@ if (!isset($_COOKIE['playerId'])) {
     setcookie('playerId', $playerId, time() + (86400 * 30), "/"); // Cookie valide pour 30 jours
 } else {
     $playerId = $_COOKIE['playerId'];
+
+
 
 }
 
@@ -217,7 +223,9 @@ if (isset($_POST['reset']) && !$isSpectateur) {
 <head>
     <title>Morpion Multijoueur</title>
     <?php if (!$peutJouer && $partie['status'] === 'en_cours'): ?>
+
     <meta http-equiv="refresh" content="2">
+
     <?php endif; ?>
     <style>
         @font-face {
@@ -292,7 +300,9 @@ if (isset($_POST['reset']) && !$isSpectateur) {
             cursor: not-allowed;
         }
         .gagnant {
+
             color: #ffffff;
+
             font-weight: bold;
         }
         .spectateur {

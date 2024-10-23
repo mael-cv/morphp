@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'maelcv/morpion',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '9190a32170974c04ff9b979ecbab52a205235c7d',
+        'type' => 'project',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'maelcv/morpion' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '9190a32170974c04ff9b979ecbab52a205235c7d',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'mustache/mustache' => array(
+            'pretty_version' => 'v2.14.2',
+            'version' => '2.14.2.0',
+            'reference' => 'e62b7c3849d22ec55f3ec425507bf7968193a6cb',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mustache/mustache',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'ninsuo/php-shared-memory' => array(
+            'pretty_version' => 'v2.1.0',
+            'version' => '2.1.0.0',
+            'reference' => '177dec599bd6aacc5b1cffcedcf8bdd7b8734cae',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../ninsuo/php-shared-memory',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
